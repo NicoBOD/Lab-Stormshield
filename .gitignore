@@ -1,0 +1,10 @@
+# Images maîtres des VM (~5,3 Go, non versionnées — voir README.md « Images maîtres »)
+masters/*.qcow2
+*.qcow2
+*.ova
+*.vdi
+*.vmdk
+
+# Divers
+*.swp
+.DS_Store
