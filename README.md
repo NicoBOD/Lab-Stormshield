@@ -119,11 +119,6 @@ Détail complet, dépannage et schéma d'adressage : [PROCEDURE.md](PROCEDURE.md
 | ![Configuration du client](screenshots/05-configuration-du-client-choisir-sns-au-debut.png) Configuration du client (choisir `sns` au début) | ![Bureau du client](screenshots/06-bureau-du-client.png) Bureau du client |
 | ![Firewall en configuration par défaut](screenshots/07-firewall-en-conf-par-defaut.png) Firewall en configuration par défaut | |
 
-## Roadmap
-
-- [ ] Environnement pédagogique équivalent au format **VirtualBox** (export OVA), si la capacité
-      de stockage du dépôt le permet.
-
 ## Licence et usage pédagogique
 
 Le script et la documentation de ce dépôt sont mon travail original. **Stormshield Network
