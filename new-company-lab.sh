@@ -116,7 +116,7 @@ remove_vm() {
     echo "VM $name : déjà absente."
   fi
   if [ -f "$disk" ]; then
-    rtk proxy sudo rm -f "$disk"
+    sudo rm -f "$disk"
     echo "Disque $disk : supprimé."
   else
     echo "Disque $disk : déjà absent."
@@ -219,11 +219,11 @@ create_net "$DMZ_NET" "$DMZ_SUBNET"
 # --- 2. Disques (clones légers, backing file = image maître) -----------
 echo
 echo "Création des disques (overlay qcow2, image maître jamais modifiée)..."
-rtk proxy sudo qemu-img create -f qcow2 -F qcow2 -b "$SERVER_MASTER" "$SERVER_DISK"
-rtk proxy sudo qemu-img create -f qcow2 -F qcow2 -b "$CLIENT_MASTER" "$CLIENT_DISK"
-rtk proxy sudo qemu-img create -f qcow2 -F qcow2 -b "$FIREWALL_MASTER" "$FIREWALL_DISK"
-rtk proxy sudo chown root:root "$SERVER_DISK" "$CLIENT_DISK" "$FIREWALL_DISK"
-rtk proxy sudo chmod 600 "$SERVER_DISK" "$CLIENT_DISK" "$FIREWALL_DISK"
+sudo qemu-img create -f qcow2 -F qcow2 -b "$SERVER_MASTER" "$SERVER_DISK"
+sudo qemu-img create -f qcow2 -F qcow2 -b "$CLIENT_MASTER" "$CLIENT_DISK"
+sudo qemu-img create -f qcow2 -F qcow2 -b "$FIREWALL_MASTER" "$FIREWALL_DISK"
+sudo chown root:root "$SERVER_DISK" "$CLIENT_DISK" "$FIREWALL_DISK"
+sudo chmod 600 "$SERVER_DISK" "$CLIENT_DISK" "$FIREWALL_DISK"
 
 # --- 3. Définition des 3 domaines ---------------------------------------
 echo "Définition des VM..."
